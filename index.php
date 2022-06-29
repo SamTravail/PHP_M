@@ -8,13 +8,16 @@ include('includes/fonctions.php');
 
 $notes = [12,5,16,7];
 
-$sommeNotes = 0;
-for ($j =0; $j<count($notes); $j++){
-    $sommeNotes += $notes[$j];
-}
-$moyenneNotes=$sommeNotes/count($notes);
+//$sommeNotes = 0;
+//for ($j =0; $j<count($notes); $j++){
+//    $sommeNotes += $notes[$j];
+//}
+//$moyenneNotes=$sommeNotes/count($notes);
 
-echo $moyenneNotes;
+//echo $moyenneNotes;
+foreach($notes as $note) {
+    echo $note. '<br>';
+}
 
 ?>
 </main>
