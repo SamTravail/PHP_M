@@ -8,9 +8,13 @@ include('includes/fonctions.php');
 
 $notes = [12,5,16,7];
 
-$moyenne = array_sum($notes)/count($notes);
-debug($moyenne);
+$sommeNotes = 0;
+for ($j =0; $j<count($notes); $j++){
+    $sommeNotes += $notes[$j];
+}
+$moyenneNotes=$sommeNotes/count($notes);
 
+echo $moyenneNotes;
 
 ?>
 </main>
