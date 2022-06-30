@@ -8,4 +8,5 @@
 </head>
 <body>
     <h1 style="text-align:center;">Bienvenue dans le PHP !</h1>
+    <hr>
     
