@@ -6,23 +6,23 @@ include('includes/fonctions.php');
 <?php
 
 
-
-// $tab = [
-//     'voiture' => 'ford',
-//     'nombres' => [1,2,3,4],
-//     'planetes' => ['Mars', 'Terre']
-// ];
-
-// debug($tab['nombres'][0]);
-
-$tab = [];
-$tab[] = ['A','B','C'];
-$tab[] = ['S','U','V'];
-$tab[] = ['O','U','E','I'];
-
-debug($tab[2][2].$tab[1][0].$tab[0][2].$tab[0][2].$tab[2][3]);
-
+$produits = [
+    ['nom' => 'chaussettes', 'prix' => 10],
+    ['nom' => 'velo', 'prix' => 500],
+    ['nom' => 'carotte', 'prix' => 2],
+    ['nom' => 'boulon', 'prix' => 9]
+];
 ?>
+<ul>
+    <?php
+        foreach ($produits as $produit) {
+    ?>
+    <li>
+        <?=$produit['nom']?> : <?=$produit['prix']?> €
+    </li>
+    <?php } ?>
+</ul>
+
 </main>
 <?php
 include('includes/footer.php');
