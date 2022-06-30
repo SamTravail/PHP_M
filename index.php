@@ -7,21 +7,20 @@ include('includes/fonctions.php');
 
 
 
-$ages= [
-    'Michel' => 34,
-    'lucie' => 3,
-    'Mouloud' => 53
-];
+// $tab = [
+//     'voiture' => 'ford',
+//     'nombres' => [1,2,3,4],
+//     'planetes' => ['Mars', 'Terre']
+// ];
 
-rsort($ages);
-debug($ages);
+// debug($tab['nombres'][0]);
 
-$planetes = ['mars','terre','pluton','venus','jupiter'];
-debug($planetes);
-rsort($planetes);
-debug($planetes);
+$tab = [];
+$tab[] = ['A','B','C'];
+$tab[] = ['S','U','V'];
+$tab[] = ['O','U','E','I'];
 
-
+debug($tab[2][2].$tab[1][0].$tab[0][2].$tab[0][2].$tab[2][3]);
 
 ?>
 </main>
