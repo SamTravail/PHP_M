@@ -4,25 +4,24 @@ include('includes/fonctions.php');
 
 ?>
 <main>
-<?php
+<?php 
+echo "<br>";
+echo "<br>";
+$tabnbs = [27, 15, 34, 379, 248, 5643, 81, 211, 999, 142, 300, 572];
+
+$nombres = "<ul>";
+foreach($tabnbs as $tabnb) {
+    $nombres .= "<li>$pairImpair</li>";
+    if ($tabnb%2 === 0){
+    echo "<li>$tabnb est pair</li>";
+} else {
+    echo "<li>$tabnb est impair</li>";
+}
+} 
+$nombres .= "</ul>";
 
 
-$produits = [
-    ['nom' => 'chaussettes', 'prix' => 10],
-    ['nom' => 'velo', 'prix' => 500],
-    ['nom' => 'carotte', 'prix' => 2],
-    ['nom' => 'boulon', 'prix' => 9]
-];
 ?>
-<ul>
-    <?php
-        foreach ($produits as $produit) {
-    ?>
-    <li>
-        <?=$produit['nom']?> : <?=$produit['prix']?> €
-    </li>
-    <?php } ?>
-</ul>
 
 </main>
 
