@@ -1,6 +1,7 @@
 <?php
 include('includes/header.php');
 include('includes/fonctions.php');
+
 ?>
 <main>
 <?php
@@ -24,5 +25,6 @@ $produits = [
 </ul>
 
 </main>
+
 <?php
 include('includes/footer.php');
