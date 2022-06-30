@@ -28,7 +28,14 @@ include('includes/fonctions.php');
         "sport" => '',
     
     ];
-    debug($users0);
+    foreach($users as $key => $value) {
+        if ($value == ""){
+            echo "$key : Aucune information<br>";
+        } else {
+            echo "$key : $value<br>";
+        }
+    }
+    
     ?>
 
 </main>
