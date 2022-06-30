@@ -1,7 +1,5 @@
-<footer>
+<footer style="text-align:center;">
     <h3>the Footer</h3>
-
-    <hr>
     <?php echo date('Y');?>
 </footer>   
 </body>
