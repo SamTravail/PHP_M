@@ -33,20 +33,38 @@ include('includes/fonctions.php');
 //     }
 //     echo($nbmax);
 
-$people = [
-    [
-        'nom' => 'Mohamed',
-        'prenom' => 'Jean',
-        'email' => 'jean@mohamed.com'
-    ],
-    [
-        'nom' => 'Dupond',
-        'prenom' => 'Lucie',
-        'email' => 'lucie@dupond.com'
-    ]
-    ];
-echo "le nom de Lucie est : ". $people[1]['nom'];
+// $peoples = [
+//     [
+//         'nom' => 'Mohamed',
+//         'prenom' => 'Jean',
+//         'email' => 'jean@mohamed.com'
+//     ],
+//     [
+//         'nom' => 'Dupond',
+//         'prenom' => 'Lucie',
+//         'email' => 'lucie@dupond.com'
+//     ]
+//     ];
+// echo "le nom de Lucie est : ". $peoples[1]['nom'];
 
+// $json_peoples = json_encode($peoples);
+// debug($json_peoples);
+
+$json_peoples = '[{
+    "nom" : "Durand",
+    "prenom" : "Claude",
+    "age" : 35
+},{
+    "nom" : "Viko",
+    "prenom" : "Amy",
+    "age" : 45
+}]';
+
+debug($json_peoples);
+
+$peoples_array_php = json_decode($json_peoples,true);
+
+debug($peoples_array_php);
 
 
     ?>
