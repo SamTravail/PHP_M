@@ -23,15 +23,31 @@ include('includes/fonctions.php');
     //     }
     // }
     
-$nombres = [4,15,2,145,42,5,78,12];
-$nbmax= $nombres[0];
-// trouver le nombre mai du tableau
-foreach($nombres as $nombre) {
-        if ($nombre > $nbmax){
-            $nbmax = $nombre;
-        }
-    }
-    echo($nbmax);
+// $nombres = [4,15,2,145,42,5,78,12];
+// $nbmax= $nombres[0];
+// // trouver le nombre mai du tableau
+// foreach($nombres as $nombre) {
+//         if ($nombre > $nbmax){
+//             $nbmax = $nombre;
+//         }
+//     }
+//     echo($nbmax);
+
+$people = [
+    [
+        'nom' => 'Mohamed',
+        'prenom' => 'Jean',
+        'email' => 'jean@mohamed.com'
+    ],
+    [
+        'nom' => 'Dupond',
+        'prenom' => 'Lucie',
+        'email' => 'lucie@dupond.com'
+    ]
+    ];
+echo "le nom de Lucie est : ". $people[1]['nom'];
+
+
 
     ?>
 </main>
