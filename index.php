@@ -24,18 +24,14 @@ include('includes/fonctions.php');
     // }
     
 $nombres = [4,15,2,145,42,5,78,12];
-define("nb", 0);
+$nbmax= $nombres[0];
 // trouver le nombre mai du tableau
 foreach($nombres as $nombre) {
-        if ($nombre > nb){
-            (nb == $nombre);
-        } else {
-            echo(nb);
+        if ($nombre > $nbmax){
+            $nbmax = $nombre;
         }
     }
-
-
-
+    echo($nbmax);
 
     ?>
 </main>
