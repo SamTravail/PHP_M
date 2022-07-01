@@ -53,11 +53,15 @@ include('includes/fonctions.php');
 $json_peoples = '[{
     "nom" : "Durand",
     "prenom" : "Claude",
-    "age" : 35
+    "age" : 35,
+    "couleur" : ["rouge", "vert", "jaune"],
+    "image" : "https://ximg.es/64x64/000/fff"
 },{
     "nom" : "Viko",
     "prenom" : "Amy",
-    "age" : 45
+    "age" : 45,
+    "couleur" : ["marron", "bleu", "violet"],
+    "image" : "https://ximg.es/64x64/000/fff"
 }]';
 
 debug($json_peoples);
@@ -68,6 +72,10 @@ debug($peoples_array_php);
 
 
     ?>
+    <img src="<?php 
+        echo $peoples_array_php[1]['image'];
+    
+    ?>"></img>
 </main>
 
 <?php
