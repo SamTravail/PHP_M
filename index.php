@@ -32,78 +32,16 @@ include('includes/fonctions.php');
 <main>
     <?php
 
-    // $users = [
-    //     "firstname" => 'Mike',
-    //     "lastname" => 'Olganh',
-    //     "pseudo" => '',
-    //     "age" => '34',
-    //     "food" => '',
-    //     "sport" => '',
-
-    // ];
-    // foreach($users as $key => $value) {
-    //     if ($value == ""){
-    //         echo "$key : Aucune information<br>";
-    //     } else {
-    //         echo "$key : $value<br>";
-    //     }
-    // }
-
-    // $nombres = [4,15,2,145,42,5,78,12];
-    // $nbmax= $nombres[0];
-    // // trouver le nombre mai du tableau
-    // foreach($nombres as $nombre) {
-    //         if ($nombre > $nbmax){
-    //             $nbmax = $nombre;
-    //         }
-    //     }
-    //     echo($nbmax);
-
-    // $peoples = [
-    //     [
-    //         'nom' => 'Mohamed',
-    //         'prenom' => 'Jean',
-    //         'email' => 'jean@mohamed.com'
-    //     ],
-    //     [
-    //         'nom' => 'Dupond',
-    //         'prenom' => 'Lucie',
-    //         'email' => 'lucie@dupond.com'
-    //     ]
-    //     ];
-    // echo "le nom de Lucie est : ". $peoples[1]['nom'];
-
-    // $json_peoples = json_encode($peoples);
-    // debug($json_peoples);
-
-    $json_peoples = '[{
-    "nom" : "Durand",
-    "prenom" : "Claude",
-    "age" : 35,
-    "couleur" : ["rouge", "vert", "jaune"],
-    "image" : "https://ximg.es/64x64/000/fff"
-},{
-    "nom" : "Viko",
-    "prenom" : "Amy",
-    "age" : 45,
-    "couleur" : ["marron", "bleu", "violet"],
-    "image" : "https://ximg.es/64x64/000/fff"
-}]';
-
-    // debug($json_peoples);
-
-    // $peoples_array_php = json_decode($json_peoples,true);
-
-    // debug($peoples_array_php);
-
-    $users = file_get_contents("./users.json");
+   
+    // $users = file_get_contents("./users.json");
     // debug($users);
 
-    $users_array_php = json_decode($users, true);
+    // $users_array_php = json_decode($users, true);
 
-    $id_users = $users_array_php['results'];
+    // $id_users = $users_array_php['results'];
 
     // echo(count($id_users));
+    /*
     ?>
     <div class="container">
         <?php
@@ -132,7 +70,40 @@ include('includes/fonctions.php');
                 // echo $peoples_array_php[1]['image'];
 
                 ?>" alt="Amy image"></img> -->
+                */
 
+                $users = file_get_contents("./persons.json");
+            
+                $tab_users = json_decode($users, true);
+            
+                echo(count($tab_users));
+
+                // debug($tab_users);
+
+                ?>
+
+                               
+                        <div class="card" style="text-align: center;">
+                            <h1><?=$tab_users[2]['friends'][1]['name']; ?></h1>
+                            <p>La couleur des yeux de Ball Shaffer est :
+                                <?=$tab_users[1]['eyeColor']; ?></p>
+                            <hr>
+                            <article>
+                                <?php foreach ($tab_users as $key => $value) {?>
+                                <p><img src="<?=$value("picture")?>"></p>
+                                <p>Nom : <?=$value["name"]?></p>
+
+                            </article>
+                           
+                        </div>
+            
+                    <?php }; ?>
+                <?php
+
+
+
+
+                ?>
 </main>
 
 <?php
